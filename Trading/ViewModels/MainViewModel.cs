@@ -15,19 +15,66 @@ namespace Trading.ViewModels
     {
         private string _adrsFolder;
         private string _mervalFolder;
-        //public ObservableCollection<Ticker> Tickers { get; set; }
-
-        //public ObservableCollection<Source> Sources { get; set; }
+        private bool _mervalFolderReady;
+        private bool _adrsFolderReady;
+        private List<Ticker> _mervalTickers;
+        private List<Ticker> _adrTickers;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public List<Ticker> MervalTickers { get; set; }
+        public List<Ticker> MervalTickers
+        {
+            get
+            {
+                return _mervalTickers;
+            }
+            set
+            {
+                if (value == null) return;
+                _mervalTickers = value;
+                OnPropertyChanged();
+            }
+        }
 
-        public List<Ticker> AdrTickers { get; set; }
+        public List<Ticker> AdrTickers
+        {
+            get
+            {
+                return _adrTickers;
+            }
+            set
+            {
+                if (value == null) return;
+                _adrTickers = value;
+                OnPropertyChanged();
+            }
+        }
 
-        public bool AdrsFolderReady { get; set; }
+        public bool AdrsFolderReady
+        {
+            get
+            {
+                return _adrsFolderReady;
+            }
+            set
+            {
+                _adrsFolderReady = value;
+                OnPropertyChanged();
+            }
+        }
 
-        public bool MervalFolderReady { get; set; }
+        public bool MervalFolderReady
+        {
+            get
+            {
+                return _mervalFolderReady;
+            }
+            set
+            {
+                _mervalFolderReady = value;
+                OnPropertyChanged();
+            }
+        }
 
         public string AdrsFolder
         {
@@ -37,10 +84,10 @@ namespace Trading.ViewModels
             }
             set
             {
-                if (value == null || _adrsFolder == value) return;
-
+                if (value == null) return;
                 _adrsFolder = value;
                 CheckAdrsFolder();
+                OnPropertyChanged();
             }
         }
 
@@ -52,10 +99,10 @@ namespace Trading.ViewModels
             }
             set
             {
-                if (value == null || _mervalFolder == value) return;
-
+                if (value == null) return;
                 _mervalFolder = value;
                 CheckMervalFolder();
+                OnPropertyChanged();
             }
         }
 
@@ -96,7 +143,12 @@ namespace Trading.ViewModels
             MervalFolderReady = !String.IsNullOrEmpty(mervalPath) && Directory.Exists(mervalPath) &&
                                        meta.IsMetaStockDirectory(mervalPath);
 
-            if (!MervalFolderReady) return;
+            if (!MervalFolderReady)
+            {
+                _mervalFolder = null;
+                Properties.Settings.Default.MervalPath = null;
+                Properties.Settings.Default.Save();
+            }
 
             foreach (var mervalTicker in MervalTickers)
             {
@@ -116,7 +168,12 @@ namespace Trading.ViewModels
             AdrsFolderReady = !String.IsNullOrEmpty(adrsPath) && Directory.Exists(adrsPath) &&
                                        meta.IsMetaStockDirectory(adrsPath);
 
-            if (!AdrsFolderReady) return;
+            if (!AdrsFolderReady)
+            {
+                _adrsFolder = null;
+                Properties.Settings.Default.ADRsPath = null;
+                Properties.Settings.Default.Save();
+            }
 
             foreach (var adrTicker in AdrTickers)
             {

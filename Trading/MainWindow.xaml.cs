@@ -23,6 +23,8 @@ namespace Trading
             var dialog = new FolderBrowserDialog();
             var result = dialog.ShowDialog();
             ((MainViewModel) DataContext).MervalFolder = dialog.SelectedPath;
+            MervalUpdateGrid.ItemsSource = null;
+            MervalUpdateGrid.ItemsSource = ((MainViewModel) DataContext).MervalTickers;
         }
     }
 }
