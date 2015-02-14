@@ -57,10 +57,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Commands\RelayCommand.cs" />
+    <Compile Include="Commands\RelayParameterizedCommand.cs" />
     <Compile Include="Helpers\Metastock.cs" />
-    <Compile Include="Helpers\Source.cs" />
-    <Compile Include="Helpers\SourceFactory.cs" />
-    <Compile Include="Helpers\TickerUpdater.cs" />
+    <Compile Include="Services\Source.cs" />
+    <Compile Include="Services\SourceFactory.cs" />
+    <Compile Include="Services\TickerUpdater.cs" />
     <Compile Include="Models\Tickers.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Models\Source.cs" />

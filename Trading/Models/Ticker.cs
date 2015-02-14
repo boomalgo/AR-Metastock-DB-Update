@@ -1,7 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Xml.Serialization;
+using Trading.Annotations;
 
 namespace Trading.Models
 {
@@ -15,6 +17,7 @@ namespace Trading.Models
         private bool _mervalIndex;
         private string _lastUpdate;
         private int _selectedSource;
+        private ObservableCollection<Source> _sources;
 
         [XmlAttribute]
         public string Name
@@ -28,6 +31,7 @@ namespace Trading.Models
                 if (value != null && _name != value)
                 {
                     _name = value;
+                    OnPropertyChanged();
                 }
             }
         }
@@ -42,6 +46,7 @@ namespace Trading.Models
             set
             {
                 _selectedSource = value;
+                OnPropertyChanged();
             }
         }
 
@@ -57,6 +62,7 @@ namespace Trading.Models
                 if (value != null && _symbol != value)
                 {
                     _symbol = value;
+                    OnPropertyChanged();
                 }
             }
         }
@@ -71,6 +77,7 @@ namespace Trading.Models
             set
             {
                 _bond = value;
+                OnPropertyChanged();
             }
         }
 
@@ -86,6 +93,7 @@ namespace Trading.Models
                 if (value != null && _market != value)
                 {
                     _market = value;
+                    OnPropertyChanged();
                 }
             }
         }
@@ -100,6 +108,7 @@ namespace Trading.Models
             set
             {
                 _mervalIndex = value;
+                OnPropertyChanged();
             }
         }
 
@@ -112,19 +121,31 @@ namespace Trading.Models
             set
             {
                 _lastUpdate = value;
+                OnPropertyChanged();
             }
         }
 
         [XmlArray]
-        public List<Source> Sources { get; set; }
-
-        void OnPropertyChanged(string prop)
+        public ObservableCollection<Source> Sources
         {
-            if (PropertyChanged != null)
-                PropertyChanged(this, new PropertyChangedEventArgs(prop));
+            get
+            {
+                return _sources;
+            }
+            set
+            {
+                _sources = value;
+                OnPropertyChanged();
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            var handler = PropertyChanged;
+            if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 }

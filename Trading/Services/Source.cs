@@ -1,9 +1,9 @@
-﻿namespace Trading.Helpers
+﻿namespace Trading.Services
 {
     public abstract class Source
     {
         // Get Price Records List<PriceRecord>() (lastdate)
-        // Static Check source
+        // Check source
         // 
     }
 }
