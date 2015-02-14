@@ -38,12 +38,60 @@ namespace Trading.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string ADRsPath {
+        public string ADRSPath {
             get {
-                return ((string)(this["ADRsPath"]));
+                return ((string)(this["ADRSPath"]));
             }
             set {
-                this["ADRsPath"] = value;
+                this["ADRSPath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("BCBA")]
+        public string MervalMarket {
+            get {
+                return ((string)(this["MervalMarket"]));
+            }
+            set {
+                this["MervalMarket"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("NYSE")]
+        public string ADRSMarket {
+            get {
+                return ((string)(this["ADRSMarket"]));
+            }
+            set {
+                this["ADRSMarket"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Merval")]
+        public string Merval {
+            get {
+                return ((string)(this["Merval"]));
+            }
+            set {
+                this["Merval"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("ADRS")]
+        public string ADRS {
+            get {
+                return ((string)(this["ADRS"]));
+            }
+            set {
+                this["ADRS"] = value;
             }
         }
     }

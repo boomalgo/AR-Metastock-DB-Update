@@ -57,11 +57,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Helpers\Metastock.cs" />
+    <Compile Include="Helpers\Source.cs" />
+    <Compile Include="Helpers\SourceFactory.cs" />
+    <Compile Include="Helpers\TickerUpdater.cs" />
     <Compile Include="Models\Tickers.cs" />
     <Compile Include="Properties\Annotations.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Models\Source.cs" />
     <Compile Include="Models\Ticker.cs" />
+    <Compile Include="ViewModels\PanelViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
