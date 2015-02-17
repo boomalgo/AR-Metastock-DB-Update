@@ -1,18 +1,23 @@
-﻿using System;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Xml.Serialization;
-using Trading.Annotations;
-
-namespace Trading.Models
+﻿namespace Trading.Models
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Runtime.CompilerServices;
+    using System.Xml.Serialization;
+    using Annotations;
+    using TradingTools;
+
     [Serializable]
-    public class Source : INotifyPropertyChanged
+    public abstract class Source : INotifyPropertyChanged
     {
+        #region Fields
         private int _id;
         private string _name;
-        private string _symbol;
+        private Dictionary<string, string> _parameters;
+        #endregion
 
+        #region Properties
         [XmlAttribute]
         public int Id
         {
@@ -42,21 +47,27 @@ namespace Trading.Models
             }
         }
 
-        [XmlAttribute]
-        public string SymbolId
+        [XmlArray]
+        public Dictionary<string, string> Parameters
         {
             get
             {
-                return _symbol;
+                return _parameters;
             }
             set
             {
-                if (value == null || _symbol == value) return;
-                _symbol = value;
+                if (value == null || _parameters == value) return;
+                _parameters = value;
                 OnPropertyChanged();
             }
         }
+        #endregion
 
+        #region Methods
+        public abstract List<PriceRecord> GetPriceRecords(DateTime lastDateTime);
+        #endregion
+
+        #region Notifications
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
@@ -65,5 +76,6 @@ namespace Trading.Models
             var handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
         }
+        #endregion
     }
 }

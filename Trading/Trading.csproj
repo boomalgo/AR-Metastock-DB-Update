@@ -60,9 +60,7 @@
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Commands\RelayParameterizedCommand.cs" />
     <Compile Include="Helpers\Metastock.cs" />
-    <Compile Include="Services\Source.cs" />
-    <Compile Include="Services\SourceFactory.cs" />
-    <Compile Include="Services\TickerUpdater.cs" />
+    <Compile Include="Models\Sources\InvertirOnline.cs" />
     <Compile Include="Models\Tickers.cs" />
     <Compile Include="Properties\Annotations.cs" />
     <Compile Include="Models\Source.cs" />
@@ -108,7 +106,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Services\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\Tickers.xml">
       <SubType>Designer</SubType>

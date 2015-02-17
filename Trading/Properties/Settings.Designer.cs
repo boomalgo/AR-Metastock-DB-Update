@@ -94,5 +94,18 @@ namespace Trading.Properties {
                 this["ADRS"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://www.invertironline.com/Titulo/DescargarCotizacionesHistoricasTitulo?idTitu" +
+            "lo=")]
+        public string IOLCsvUrl {
+            get {
+                return ((string)(this["IOLCsvUrl"]));
+            }
+            set {
+                this["IOLCsvUrl"] = value;
+            }
+        }
     }
 }

@@ -20,5 +20,8 @@
     <Setting Name="ADRS" Type="System.String" Scope="User">
       <Value Profile="(Default)">ADRS</Value>
     </Setting>
+    <Setting Name="IOLCsvUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://www.invertironline.com/Titulo/DescargarCotizacionesHistoricasTitulo?idTitulo=</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

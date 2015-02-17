@@ -1,15 +1,21 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Xml.Serialization;
-using Trading.Annotations;
+﻿using System.Linq;
+using Trading.Helpers;
 
 namespace Trading.Models
 {
+    #region Using
+    using System;
+    using System.Collections.ObjectModel;
+    using System.ComponentModel;
+    using System.Runtime.CompilerServices;
+    using System.Xml.Serialization;
+    using Annotations;
+    #endregion
+
     [Serializable]
     public class Ticker : INotifyPropertyChanged
     {
+        #region Fields
         private string _name;
         private string _symbol;
         private bool _bond;
@@ -17,7 +23,10 @@ namespace Trading.Models
         private bool _mervalIndex;
         private string _lastUpdate;
         private int _selectedSource;
-        private ObservableCollection<Source> _sources;
+        private ObservableCollection<Source> _sources; 
+        #endregion
+
+        #region Properties
 
         [XmlAttribute]
         public string Name
@@ -137,8 +146,33 @@ namespace Trading.Models
                 _sources = value;
                 OnPropertyChanged();
             }
-        }
+        } 
+        #endregion
 
+        #region Public Methods
+        public void Update(string metastockFolder)
+        {
+            DateTime lastDate;
+            try
+            {
+                lastDate = DateTime.Parse(LastUpdate);
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
+            var source = Sources.FirstOrDefault(x => x.Id == SelectedSource);
+            if (source == null) return;
+
+            var missingPriceRecords = source.GetPriceRecords(lastDate);
+
+            Metastock.UpdateSymbol(metastockFolder, Symbol, missingPriceRecords);
+            LastUpdate = Metastock.GetLastDateStatus(metastockFolder, Symbol);
+        } 
+        #endregion
+
+        #region Notifications
         public event PropertyChangedEventHandler PropertyChanged;
 
         [NotifyPropertyChangedInvocator]
@@ -146,6 +180,7 @@ namespace Trading.Models
         {
             var handler = PropertyChanged;
             if (handler != null) handler(this, new PropertyChangedEventArgs(propertyName));
-        }
+        } 
+        #endregion
     }
 }
