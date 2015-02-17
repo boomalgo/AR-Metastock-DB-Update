@@ -11,7 +11,7 @@
         /// <summary>
         /// Reference to the method to execute
         /// </summary>
-        private readonly Action executeMethod;
+        private Action _executeMethod;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="RelayCommand"/> class.
@@ -21,7 +21,18 @@
         /// </param>
         public RelayCommand(Action eventHandler)
         {
-            this.executeMethod = eventHandler;
+            this._executeMethod = eventHandler;
+        }
+
+        /// <summary>
+        /// Updates the event to execute.
+        /// </summary>
+        /// <param name="eventHandler">
+        /// The event handler.
+        /// </param>
+        public void UpdateCommand(Action eventHandler)
+        {
+            this._executeMethod = eventHandler;
         }
 
         /// <summary>
@@ -51,7 +62,7 @@
         /// </param>
         public void Execute(object parameter)
         {
-            this.executeMethod.Invoke();
+            this._executeMethod.Invoke();
         }
     }
 }

@@ -1,7 +1,13 @@
 ﻿<Window x:Class="Trading.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:helpers="clr-namespace:Trading.Helpers"
+        xmlns:viewModels="clr-namespace:Trading.ViewModels"
         Title="Metastock Dabase Update" Height="712" Width="857" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+    <Window.Resources>
+        <helpers:PanelUiEnabledMultiConverter x:Key="PanelUiEnabledMultiConverter"/>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="418*"/>
@@ -69,9 +75,18 @@
                                         <Label Content="Path:" Margin="10,0,0,49" HorizontalAlignment="Left" Width="36" Height="26" VerticalAlignment="Bottom"/>
                                         <TextBox Text="{Binding MetastockFolder}" IsEnabled="False" Margin="51,0,41,47" TextWrapping="Wrap" Height="26" VerticalAlignment="Bottom"/>
                                         <Button Command="{Binding SelectFolderCommand}" Content="..." Margin="0,0,10,47" HorizontalAlignment="Right" Width="26" Height="26" VerticalAlignment="Bottom"/>
-                                        <Button Command="{Binding UpdateDatabaseCommand}" IsEnabled="{Binding MetastockFolderReady}" Content="Update Database" Margin="129,0,0,4" Height="38" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="129"/>
+                                        <Button Command="{Binding UpdateDatabaseCommand, Mode=OneWay}" Content="{Binding MainButtonAction}" Margin="129,0,0,4" Height="38" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="129">
+                                            <Button.IsEnabled>
+                                                <MultiBinding Converter="{StaticResource PanelUiEnabledMultiConverter}">
+                                                    <Binding ElementName="MervalTab" Path="DataContext.(viewModels:PanelViewModel.MetastockFolderReady)"/>
+                                                </MultiBinding>
+                                            </Button.IsEnabled>
+                                        </Button>
                                         <Button Content="Reset Merval" Margin="10,0,0,4" Height="38" VerticalAlignment="Bottom" ToolTip="Checks which stocks form the Merval index" HorizontalAlignment="Left" Width="114"/>
-                                        <ProgressBar Margin="263,0,10,10" Height="26" VerticalAlignment="Bottom"/>
+                                        <Grid Margin="263,0,10,10" Height="26" VerticalAlignment="Bottom">
+                                            <ProgressBar Value="{Binding BackgroundWorkerProgress}"/>
+                                            <TextBlock Text="{Binding BackgroundWorkerProgressText}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Grid>
                                     </Grid>
                                 </GroupBox>
                             </Grid>

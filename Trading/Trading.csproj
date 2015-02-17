@@ -59,7 +59,9 @@
     </ApplicationDefinition>
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Commands\RelayParameterizedCommand.cs" />
+    <Compile Include="Helpers\BackgroundWorker.cs" />
     <Compile Include="Helpers\Metastock.cs" />
+    <Compile Include="Helpers\PanelUiEnabledMultiConverter.cs" />
     <Compile Include="Models\Sources\InvertirOnline.cs" />
     <Compile Include="Models\Tickers.cs" />
     <Compile Include="Properties\Annotations.cs" />
