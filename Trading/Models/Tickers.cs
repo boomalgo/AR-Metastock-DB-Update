@@ -42,9 +42,7 @@
                     Name = tickerNode.Attribute("Name").Value,
                     Symbol = tickerNode.Attribute("Symbol").Value,
                     SelectedSource = Int32.Parse(tickerNode.Attribute("SelectedSource").Value),
-                    Bond = bool.Parse(tickerNode.Attribute("Bond").Value),
                     Market = tickerNode.Attribute("Market").Value,
-                    MervalIndex = bool.Parse(tickerNode.Attribute("MervalIndex").Value),
                     Sources = new ObservableCollection<Source>()
                 };
 
@@ -57,6 +55,14 @@
                     {
                         case "Invertir Online":
                             source = new InvertirOnline()
+                            {
+                                Id = Int32.Parse(sourceNode.Attribute("Id").Value),
+                                Name = sourceNode.Attribute("Name").Value,
+                                Parameters = new Dictionary<string, string>()
+                            };
+                            break;
+                        case "Rava Online":
+                            source = new RavaOnline()
                             {
                                 Id = Int32.Parse(sourceNode.Attribute("Id").Value),
                                 Name = sourceNode.Attribute("Name").Value,
@@ -84,7 +90,7 @@
 
         public void WriteXml(XmlWriter writer)
         {
-            throw new NotImplementedException();
+            writer.WriteAttributeString("Test", "Value");
         } 
         #endregion
     }

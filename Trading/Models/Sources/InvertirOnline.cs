@@ -12,7 +12,6 @@ namespace Trading.Models.Sources
 
     public class InvertirOnline : Source
     {
-        #region Methods
         public bool IsAvailable
         {
             get
@@ -30,6 +29,7 @@ namespace Trading.Models.Sources
             }
         }
 
+        #region Methods
         public override List<PriceRecord> GetPriceRecords(DateTime lastDateTime)
         {
             if (!IsAvailable) return new List<PriceRecord>();

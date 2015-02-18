@@ -23,5 +23,8 @@
     <Setting Name="IOLCsvUrl" Type="System.String" Scope="User">
       <Value Profile="(Default)">http://www.invertironline.com/Titulo/DescargarCotizacionesHistoricasTitulo?idTitulo=</Value>
     </Setting>
+    <Setting Name="RavaUrl" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://www.ravaonline.com/v2/empresas/precioshistoricos.php</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -107,5 +107,17 @@ namespace Trading.Properties {
                 this["IOLCsvUrl"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://www.ravaonline.com/v2/empresas/precioshistoricos.php")]
+        public string RavaUrl {
+            get {
+                return ((string)(this["RavaUrl"]));
+            }
+            set {
+                this["RavaUrl"] = value;
+            }
+        }
     }
 }

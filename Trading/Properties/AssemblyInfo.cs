@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("Trading")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("TEAM OS")]
+[assembly: AssemblyCompany("The Fusion Group")]
 [assembly: AssemblyProduct("Trading")]
-[assembly: AssemblyCopyright("Copyright © TEAM OS 2015")]
+[assembly: AssemblyCopyright("Copyright © The Fusion Group 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

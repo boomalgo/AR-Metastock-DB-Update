@@ -75,21 +75,7 @@ namespace Trading.Models
                 }
             }
         }
-
-        [XmlAttribute]
-        public bool Bond
-        {
-            get
-            {
-                return _bond;
-            }
-            set
-            {
-                _bond = value;
-                OnPropertyChanged();
-            }
-        }
-
+        
         [XmlAttribute]
         public string Market
         {
@@ -106,21 +92,7 @@ namespace Trading.Models
                 }
             }
         }
-
-        [XmlAttribute]
-        public bool MervalIndex
-        {
-            get
-            {
-                return _mervalIndex;
-            }
-            set
-            {
-                _mervalIndex = value;
-                OnPropertyChanged();
-            }
-        }
-
+        
         public string LastUpdate
         {
             get

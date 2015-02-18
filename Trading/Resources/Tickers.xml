@@ -2,25 +2,37 @@
 <Tickers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Tickers>
     <!--MERVAL-->
-    <Ticker Name="$$MERVAL_IDX" Symbol="Merval" SelectedSource="-1" Bond="false" Market="BCBA" MervalIndex="false">
-    <Sources />
+    <Ticker Name="$$MERVAL_IDX" Symbol="Merval" SelectedSource="1" Market="BCBA" >
+      <Sources>
+        <Source Id="1" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="MERVAL" />
+          </Parameters>
+        </Source>
+      </Sources>
     </Ticker>
-    <Ticker Name="$ARG Peso" Symbol="ARG_USD" SelectedSource="-1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="$ARG Peso" Symbol="ARG_USD" SelectedSource="-1" Market="BCBA" >
       <Sources />
     </Ticker>
-    <Ticker Name="$BOLSA#" Symbol="Bolsa" SelectedSource="-1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="$BOLSA#" Symbol="Bolsa" SelectedSource="-1" Market="BCBA" >
       <Sources />
     </Ticker>
-    <Ticker Name="$BURCAP#" Symbol="Burcap" SelectedSource="-1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="$BURCAP#" Symbol="Burcap" SelectedSource="-1" Market="BCBA" >
       <Sources />
     </Ticker>
-    <Ticker Name="$MERVAL_AR#" Symbol="M.AR" SelectedSource="-1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="$MERVAL_AR#" Symbol="M.AR" SelectedSource="1" Market="BCBA" >
+      <Sources>
+        <Source Id="1" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="M.AR" />
+          </Parameters>
+        </Source>
+      </Sources>
+    </Ticker>
+    <Ticker Name="$Merval25#" Symbol="Mer-25" SelectedSource="-1" Market="BCBA" >
       <Sources />
     </Ticker>
-    <Ticker Name="$Merval25#" Symbol="Mer-25" SelectedSource="-1" Bond="false" Market="BCBA" MervalIndex="false">
-      <Sources />
-    </Ticker>
-    <Ticker Name="AEN#" Symbol="AEN" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="AEN#" Symbol="AEN" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -29,34 +41,49 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="AGRO#" Symbol="AGRO" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="AGRO#" Symbol="AGRO" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="48" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="AGRO" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="ALUAR#" Symbol="ALUA" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="ALUAR#" Symbol="ALUA" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="17388" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="ALUA" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="APBR#" Symbol="APBR" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="APBR#" Symbol="APBR" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="21729" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="APBR" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="APBRA#" Symbol="APBRA" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="APBRA#" Symbol="APBRA" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -65,79 +92,119 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="APSA#" Symbol="APSA" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="APSA#" Symbol="APSA" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="113" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="APSA" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="AUSO#" Symbol="AUSO" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="AUSO#" Symbol="AUSO" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="21520" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="AUSO" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="BHIP#" Symbol="BHIP" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="BHIP#" Symbol="BHIP" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="302" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="BHIP" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="BMA#" Symbol="BMA" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="BMA#" Symbol="BMA" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="444" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="BMA" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="BOLT#" Symbol="BOLT" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="BOLT#" Symbol="BOLT" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="34089" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="BOLT" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="BPAT#" Symbol="BPAT" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="BPAT#" Symbol="BPAT" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="34746" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="BPAT" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="BRIO#" Symbol="BRIO" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="BRIO#" Symbol="BRIO" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="424" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="BRIO" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="CADO#" Symbol="CADO" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="CADO#" Symbol="CADO" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="535" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="CADO" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="CAPU#" Symbol="CAPU" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="CAPU#" Symbol="CAPU" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -146,70 +213,105 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="CAPX#" Symbol="CAPX" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="CAPX#" Symbol="CAPX" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="553" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="CAPX" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="CARC#" Symbol="CARC" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="CARC#" Symbol="CARC" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="20832" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="CARC" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="CECO2#" Symbol="CECO2" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="CECO2#" Symbol="CECO2" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="745" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="CECO2" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="CELU#" Symbol="CELU" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="CELU#" Symbol="CELU" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="758" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="CELU" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="CEPU#" Symbol="CEPU2" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="CEPU#" Symbol="CEPU2" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="773" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="CEPU2" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="CGPA#" Symbol="CGPA2" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="CGPA#" Symbol="CGPA2" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="28443" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="CGPA2" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="COLO#" Symbol="COLO" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="COLO#" Symbol="COLO" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
             <Parameter Name="SymbolId" Value="1011" />
           </Parameters>
         </Source>
+        <Source Id="2" Name="Rava Online">
+          <Parameters>
+            <Parameter Name="e" Value="CGPA2" />
+          </Parameters>
+        </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="COME#" Symbol="COME" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="COME#" Symbol="COME" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -218,7 +320,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="CRES#" Symbol="CRES" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="CRES#" Symbol="CRES" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -227,7 +329,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="CTIO#" Symbol="CTIO" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="CTIO#" Symbol="CTIO" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -236,7 +338,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="DGCU#" Symbol="DGCU2" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="DGCU#" Symbol="DGCU2" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -245,7 +347,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="DOME#" Symbol="DOME" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="DOME#" Symbol="DOME" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -254,7 +356,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="DYCA#" Symbol="DYCA" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="DYCA#" Symbol="DYCA" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -263,7 +365,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="EDENOR#" Symbol="EDN" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="EDENOR#" Symbol="EDN" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -272,7 +374,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="ERAR#" Symbol="ERAR" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="ERAR#" Symbol="ERAR" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -281,7 +383,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="FERR#" Symbol="FERR" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="FERR#" Symbol="FERR" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -290,7 +392,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="FIPL#" Symbol="FIPL" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="FIPL#" Symbol="FIPL" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -299,7 +401,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="FRAN#" Symbol="FRAN" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="FRAN#" Symbol="FRAN" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -308,7 +410,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="GARO#" Symbol="GARO" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="GARO#" Symbol="GARO" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -317,7 +419,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="GBAN#" Symbol="GBAN" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="GBAN#" Symbol="GBAN" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -326,7 +428,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="GCLA#" Symbol="GCLA" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="GCLA#" Symbol="GCLA" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -335,7 +437,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="GGAL#" Symbol="GGAL" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="GGAL#" Symbol="GGAL" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -344,7 +446,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="GRIM#" Symbol="GRIM" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="GRIM#" Symbol="GRIM" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -353,7 +455,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="INDU#" Symbol="INDU" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="INDU#" Symbol="INDU" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -362,7 +464,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="INTR#" Symbol="INTR" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="INTR#" Symbol="INTR" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -371,7 +473,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="INVJ#" Symbol="INVJ" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="INVJ#" Symbol="INVJ" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -380,7 +482,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="IRSA#" Symbol="IRSA" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="IRSA#" Symbol="IRSA" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -389,7 +491,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="JMIN#" Symbol="JMIN" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="JMIN#" Symbol="JMIN" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -398,7 +500,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="LEDE#" Symbol="LEDE" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="LEDE#" Symbol="LEDE" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -407,7 +509,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="LONG#" Symbol="LONG" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="LONG#" Symbol="LONG" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -416,7 +518,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="METR#" Symbol="METR" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="METR#" Symbol="METR" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -425,7 +527,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="MIRG#" Symbol="MIRG" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="MIRG#" Symbol="MIRG" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -434,7 +536,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="MOLI#" Symbol="MOLI" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="MOLI#" Symbol="MOLI" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -443,7 +545,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="MORI#" Symbol="MORI" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="MORI#" Symbol="MORI" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -452,7 +554,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="OEST#" Symbol="OEST" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="OEST#" Symbol="OEST" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -461,7 +563,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="PAMP#" Symbol="PAMP" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="PAMP#" Symbol="PAMP" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -470,7 +572,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="PATA#" Symbol="PATA" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="PATA#" Symbol="PATA" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -479,7 +581,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="PATY#" Symbol="PATY" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="PATY#" Symbol="PATY" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -488,7 +590,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="PESA#" Symbol="PESA" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="PESA#" Symbol="PESA" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -497,7 +599,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="PETR#" Symbol="PETR" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="PETR#" Symbol="PETR" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -506,7 +608,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="POLL#" Symbol="POLL" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="POLL#" Symbol="POLL" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -515,7 +617,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="PSUR#" Symbol="PSUR" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="PSUR#" Symbol="PSUR" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -524,7 +626,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="REP#" Symbol="REP" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="REP#" Symbol="REP" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -533,7 +635,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="RIGO#" Symbol="RIGO" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="RIGO#" Symbol="RIGO" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -542,7 +644,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="ROSE#" Symbol="ROSE" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="ROSE#" Symbol="ROSE" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -551,7 +653,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="SAMI#" Symbol="SAMI" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="SAMI#" Symbol="SAMI" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -560,7 +662,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="SEMI#" Symbol="SEMI" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="SEMI#" Symbol="SEMI" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -569,7 +671,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="STD#" Symbol="STD" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="STD#" Symbol="STD" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -578,7 +680,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="TECO#" Symbol="TECO2" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="TECO#" Symbol="TECO2" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -587,7 +689,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="TEF#" Symbol="TEF" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="TEF#" Symbol="TEF" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -596,7 +698,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="TGLT#" Symbol="TGLT" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="TGLT#" Symbol="TGLT" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -605,7 +707,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="TGNO#" Symbol="TGNO4" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="TGNO#" Symbol="TGNO4" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -614,7 +716,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="TGSU#" Symbol="TGSU2" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="TGSU#" Symbol="TGSU2" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -623,7 +725,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="TRAN#" Symbol="TRAN" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="TRAN#" Symbol="TRAN" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -632,7 +734,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="TS#" Symbol="TS" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="TS#" Symbol="TS" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -641,13 +743,13 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="WTI" Symbol="WTI" SelectedSource="-1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="WTI" Symbol="WTI" SelectedSource="-1" Market="BCBA" >
       <Sources />
     </Ticker>
-    <Ticker Name="XAUUSD" Symbol="XAUUSD" SelectedSource="-1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="XAUUSD" Symbol="XAUUSD" SelectedSource="-1" Market="BCBA" >
       <Sources />
     </Ticker>
-    <Ticker Name="YPFD#" Symbol="YPFD" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="YPFD#" Symbol="YPFD" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -656,7 +758,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBCon_4taSe2%" Symbol="PR12" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBCon_4taSe2%" Symbol="PR12" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -665,7 +767,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBDED_U$S_ProvBs.As." Symbol="BDED" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBDED_U$S_ProvBs.As." Symbol="BDED" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -674,7 +776,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBoden_U$S2015" Symbol="RO15" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBoden_U$S2015" Symbol="RO15" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -683,7 +785,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBono_ParU$_2038" Symbol="PAY0" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBono_ParU$_2038" Symbol="PAY0" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -692,7 +794,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBogar_2018" Symbol="NF18" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBogar_2018" Symbol="NF18" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -701,7 +803,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBonar U$S 2018" Symbol="AN18" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBonar U$S 2018" Symbol="AN18" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -710,7 +812,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBonar U$S 2024" Symbol="AY24" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBonar U$S 2024" Symbol="AY24" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -719,7 +821,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBonar_Bladar$15" Symbol="AS15" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBonar_Bladar$15" Symbol="AS15" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -728,7 +830,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBonar_Bladar$16" Symbol="AS16" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBonar_Bladar$16" Symbol="AS16" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -737,7 +839,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBonar_Bladar$17" Symbol="AM17" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBonar_Bladar$17" Symbol="AM17" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -746,7 +848,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBonar_Bladar$19" Symbol="AMX9" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBonar_Bladar$19" Symbol="AMX9" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -755,7 +857,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBonarX_U$S2017" Symbol="AA17" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBonarX_U$S2017" Symbol="AA17" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -764,7 +866,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBono_Discount$" Symbol="DICP" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBono_Discount$" Symbol="DICP" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -773,7 +875,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBono_DiscountU$" Symbol="DICA" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBono_DiscountU$" Symbol="DICA" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -782,7 +884,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBono_DiscountU$Dic33" Symbol="DICY" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBono_DiscountU$Dic33" Symbol="DICY" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -791,7 +893,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBono_Par$" Symbol="PARP" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBono_Par$" Symbol="PARP" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -800,7 +902,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBono_ParU$S" Symbol="PARA" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBono_ParU$S" Symbol="PARA" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -809,7 +911,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zBono_ParU$S" Symbol="PARY" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zBono_ParU$S" Symbol="PARY" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -818,7 +920,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zbonodeCons_7aSerie" Symbol="PR14" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zbonodeCons_7aSerie" Symbol="PR14" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -827,7 +929,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zConsDeu_6taS2%" Symbol="PR13" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zConsDeu_6taS2%" Symbol="PR13" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -836,7 +938,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zConsDeu_8taS" Symbol="PR15" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zConsDeu_8taS" Symbol="PR15" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -845,7 +947,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zCuasipar2045$" Symbol="CUAP" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zCuasipar2045$" Symbol="CUAP" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -854,7 +956,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zCuponPBI_DisAR" Symbol="TVPA" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zCuponPBI_DisAR" Symbol="TVPA" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -863,7 +965,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zCuponPBI_DisNY" Symbol="TVPY" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zCuponPBI_DisNY" Symbol="TVPY" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -872,7 +974,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zCuponPBI_Euro" Symbol="TVPE" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zCuponPBI_Euro" Symbol="TVPE" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -881,7 +983,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zCuponPBI_Par" Symbol="TVPP" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zCuponPBI_Par" Symbol="TVPP" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -890,7 +992,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zDIP0_10discount$" Symbol="DIP0" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zDIP0_10discount$" Symbol="DIP0" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -899,7 +1001,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zDIY0_10discountU$S" Symbol="DIY0" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zDIY0_10discountU$S" Symbol="DIY0" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -908,7 +1010,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="zGLobal_U$S2017" Symbol="GJ17" SelectedSource="1" Bond="false" Market="BCBA" MervalIndex="false">
+    <Ticker Name="zGLobal_U$S2017" Symbol="GJ17" SelectedSource="1" Market="BCBA" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -918,7 +1020,7 @@
       </Sources>
     </Ticker>
     <!--ADRs-->
-    <Ticker Name="ALTO PALERMO ADS" Symbol="APSA" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="ALTO PALERMO ADS" Symbol="APSA" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -927,7 +1029,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="BANCO ITAU HLDG ADS" Symbol="ITUB" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="BANCO ITAU HLDG ADS" Symbol="ITUB" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -936,7 +1038,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="BANCO MACRO BANS" Symbol="BMA" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="BANCO MACRO BANS" Symbol="BMA" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -945,7 +1047,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="BANCO SANTANDER B" Symbol="BSBR" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="BANCO SANTANDER B" Symbol="BSBR" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -954,7 +1056,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="BBVA Banco France" Symbol="BFR" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="BBVA Banco France" Symbol="BFR" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -963,7 +1065,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="BP p.l.c. Common" Symbol="BP" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="BP p.l.c. Common" Symbol="BP" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -972,7 +1074,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="Companhia Vale Do" Symbol="VALE" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="Companhia Vale Do" Symbol="VALE" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -981,7 +1083,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="CRESUD SACIF ADR" Symbol="CRESY" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="CRESUD SACIF ADR" Symbol="CRESY" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -990,7 +1092,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="EMPRESA DIST Y CO" Symbol="EDN" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="EMPRESA DIST Y CO" Symbol="EDN" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -999,7 +1101,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="GRUPO FIN GALICIA" Symbol="GGAL" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="GRUPO FIN GALICIA" Symbol="GGAL" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -1008,7 +1110,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="I R S INVERSION Y" Symbol="IRS" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="I R S INVERSION Y" Symbol="IRS" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -1017,7 +1119,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="NORTEL INV SA ADS" Symbol="NTL" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="NORTEL INV SA ADS" Symbol="NTL" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -1026,7 +1128,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="PAMPA ENERGIA SA" Symbol="PAM" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="PAMPA ENERGIA SA" Symbol="PAM" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -1035,7 +1137,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="PETROBRAS ENERGIA" Symbol="PZE" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="PETROBRAS ENERGIA" Symbol="PZE" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -1044,7 +1146,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="PETROLEO BRASILEI" Symbol="PBR" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="PETROLEO BRASILEI" Symbol="PBR" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -1053,10 +1155,10 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="Repsol YPF S.A. C" Symbol="REPYY" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="Repsol YPF S.A. C" Symbol="REPYY" SelectedSource="1" Market="NYSE" >
       <Sources />
     </Ticker>
-    <Ticker Name="TELECOM ARGENTIA" Symbol="TEO" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="TELECOM ARGENTIA" Symbol="TEO" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -1065,10 +1167,10 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="TENARIS MILAN" Symbol="TEN.MI" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="TENARIS MILAN" Symbol="TEN.MI" SelectedSource="1" Market="NYSE" >
       <Sources />
     </Ticker>
-    <Ticker Name="TENARIS S.A ADS" Symbol="TS" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="TENARIS S.A ADS" Symbol="TS" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -1077,7 +1179,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="TERNIUM S.A. ADS" Symbol="TX" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="TERNIUM S.A. ADS" Symbol="TX" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -1086,7 +1188,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="TRANSPORTADORA AD" Symbol="TGS" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="TRANSPORTADORA AD" Symbol="TGS" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>
@@ -1095,7 +1197,7 @@
         </Source>
       </Sources>
     </Ticker>
-    <Ticker Name="Y P F SOCIEDADE A" Symbol="YPF" SelectedSource="1" Bond="false" Market="NYSE" MervalIndex="false">
+    <Ticker Name="Y P F SOCIEDADE A" Symbol="YPF" SelectedSource="1" Market="NYSE" >
       <Sources>
         <Source Id="1" Name="Invertir Online">
           <Parameters>

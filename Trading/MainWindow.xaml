@@ -38,8 +38,6 @@
                                                         </Style>
                                                     </DataGridTextColumn.ElementStyle>
                                                 </DataGridTextColumn>
-                                                <DataGridCheckBoxColumn Header="Bond" IsReadOnly="True" Width="SizeToHeader" Binding="{Binding Bond}"></DataGridCheckBoxColumn>
-                                                <DataGridCheckBoxColumn Header="Merval" IsReadOnly="True" Width="SizeToHeader" Binding="{Binding MervalIndex}"></DataGridCheckBoxColumn>
                                                 <DataGridComboBoxColumn Header="Source" Width="*" SelectedValueBinding="{Binding SelectedSource, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="Id" DisplayMemberPath="Name" >
                                                     <DataGridComboBoxColumn.HeaderStyle>
                                                         <Style TargetType="DataGridColumnHeader">
@@ -74,7 +72,13 @@
                                         </DataGrid>
                                         <Label Content="Path:" Margin="10,0,0,49" HorizontalAlignment="Left" Width="36" Height="26" VerticalAlignment="Bottom"/>
                                         <TextBox Text="{Binding MetastockFolder}" IsEnabled="False" Margin="51,0,41,47" TextWrapping="Wrap" Height="26" VerticalAlignment="Bottom"/>
-                                        <Button Command="{Binding SelectFolderCommand}" Content="..." Margin="0,0,10,47" HorizontalAlignment="Right" Width="26" Height="26" VerticalAlignment="Bottom"/>
+                                        <Button Command="{Binding SelectFolderCommand}" Content="..." Margin="0,0,10,47" HorizontalAlignment="Right" Width="26" Height="26" VerticalAlignment="Bottom">
+                                            <Button.IsEnabled>
+                                                <MultiBinding Converter="{StaticResource PanelUiEnabledMultiConverter}">
+                                                    <Binding ElementName="MervalTab" Path="DataContext.(viewModels:PanelViewModel.BackgroundWorkerNotBusy)"/>
+                                                </MultiBinding>
+                                            </Button.IsEnabled>
+                                        </Button>
                                         <Button Command="{Binding UpdateDatabaseCommand, Mode=OneWay}" Content="{Binding MainButtonAction}" Margin="129,0,0,4" Height="38" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="129">
                                             <Button.IsEnabled>
                                                 <MultiBinding Converter="{StaticResource PanelUiEnabledMultiConverter}">
@@ -82,7 +86,6 @@
                                                 </MultiBinding>
                                             </Button.IsEnabled>
                                         </Button>
-                                        <Button Content="Reset Merval" Margin="10,0,0,4" Height="38" VerticalAlignment="Bottom" ToolTip="Checks which stocks form the Merval index" HorizontalAlignment="Left" Width="114"/>
                                         <Grid Margin="263,0,10,10" Height="26" VerticalAlignment="Bottom">
                                             <ProgressBar Value="{Binding BackgroundWorkerProgress}"/>
                                             <TextBlock Text="{Binding BackgroundWorkerProgressText}" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -112,8 +115,6 @@
                                                         </Style>
                                                     </DataGridTextColumn.ElementStyle>
                                                 </DataGridTextColumn>
-                                                <DataGridCheckBoxColumn Header="Bond" IsReadOnly="True" Width="SizeToHeader" Binding="{Binding Bond}"></DataGridCheckBoxColumn>
-                                                <DataGridCheckBoxColumn Header="Merval" IsReadOnly="True" Width="SizeToHeader" Binding="{Binding MervalIndex}"></DataGridCheckBoxColumn>
                                                 <DataGridComboBoxColumn Header="Source" Width="*" SelectedValueBinding="{Binding SelectedSource, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" SelectedValuePath="Id" DisplayMemberPath="Name" >
                                                     <DataGridComboBoxColumn.HeaderStyle>
                                                         <Style TargetType="DataGridColumnHeader">
@@ -148,9 +149,24 @@
                                         </DataGrid>
                                         <Label Content="Path:" Margin="10,0,0,49" HorizontalAlignment="Left" Width="36" Height="26" VerticalAlignment="Bottom"/>
                                         <TextBox Text="{Binding MetastockFolder}" IsEnabled="False" Margin="51,0,41,47" TextWrapping="Wrap" Height="26" VerticalAlignment="Bottom"/>
-                                        <Button Command="{Binding SelectFolderCommand}" Content="..." Margin="0,0,10,47" HorizontalAlignment="Right" Width="26" Height="26" VerticalAlignment="Bottom"/>
-                                        <Button Command="{Binding UpdateDatabaseCommand}" IsEnabled="{Binding MetastockFolderReady}" Content="Update Database" Margin="10,0,0,4" Height="38" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="129"/>
-                                        <ProgressBar Margin="144,0,10,10" Height="26" VerticalAlignment="Bottom"/>
+                                        <Button Command="{Binding SelectFolderCommand}" Content="..." Margin="0,0,10,47" HorizontalAlignment="Right" Width="26" Height="26" VerticalAlignment="Bottom">
+                                            <Button.IsEnabled>
+                                                <MultiBinding Converter="{StaticResource PanelUiEnabledMultiConverter}">
+                                                    <Binding ElementName="AdrsTab" Path="DataContext.(viewModels:PanelViewModel.BackgroundWorkerNotBusy)"/>
+                                                </MultiBinding>
+                                            </Button.IsEnabled>
+                                        </Button>
+                                        <Button Command="{Binding UpdateDatabaseCommand, Mode=OneWay}" Content="{Binding MainButtonAction}" Margin="129,0,0,4" Height="38" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="129">
+                                            <Button.IsEnabled>
+                                                <MultiBinding Converter="{StaticResource PanelUiEnabledMultiConverter}">
+                                                    <Binding ElementName="AdrsTab" Path="DataContext.(viewModels:PanelViewModel.MetastockFolderReady)"/>
+                                                </MultiBinding>
+                                            </Button.IsEnabled>
+                                        </Button>
+                                        <Grid Margin="263,0,10,10" Height="26" VerticalAlignment="Bottom">
+                                            <ProgressBar Value="{Binding BackgroundWorkerProgress}"/>
+                                            <TextBlock Text="{Binding BackgroundWorkerProgressText}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        </Grid>
                                     </Grid>
                                 </GroupBox>
                             </Grid>
